@@ -17,7 +17,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 ::selection {
@@ -62,7 +62,7 @@ ul {
 }
 
 .section {
-  min-height: 100vh;
+  min-height: auto;
   padding-top: 80px;
 }
 
@@ -173,6 +173,7 @@ header .container {
   transition: 0.5s;
   z-index: 999;
   position: relative;
+  transform: translateX(0)
 }
 
 .menu_item {
@@ -240,7 +241,6 @@ header .container {
 /* Hero section */
 .hero {
   padding-top: 80px;
-  position: relative;
   display: block;
   background: var(--gradiend-primary-bg);
 }
@@ -1038,10 +1038,6 @@ textarea {
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 
   .hero_img img {
