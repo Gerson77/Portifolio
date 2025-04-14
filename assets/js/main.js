@@ -176,14 +176,16 @@ initPortifolioFilters();
 // Registre o ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// Função para configurar as animações
+// Função para configurar as animações apenas para telas grandes
 function setupAnimations() {
-  const isMobile = window.innerWidth <= 768; 
+  const isLargeScreen = window.innerWidth >= 1024; // Verifica se a tela é maior ou igual a 1024px
+
+  if (!isLargeScreen) return; // Sai da função se a tela for menor que 1024px
 
   // Animação do Header
   gsap.from('.header', {
     opacity: 0,
-    y: isMobile ? -50 : -100, // Movimento vertical menor no mobile
+    y: -100,
     duration: 1.5,
     ease: "power2.out",
     scrollTrigger: {
@@ -194,62 +196,34 @@ function setupAnimations() {
   });
 
   // Animação da Seção Hero
-  if(!isMobile) {
-    gsap.from('.hero_content', {
-      opacity: 0,
-      x: isMobile ? 0 : -300,
-      duration: 1.5,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: '.hero_content',
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      }
-    });
-  } else {
-    gsap.from('.hero_content', {
-      opacity: 0,
-      y: isMobile ? 100 : -300, // Movimento vertical no mobile, horizontal no desktop
-      duration: 1.5,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: '.hero_content',
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      }
-    });
-  }
+  gsap.from('.hero_content', {
+    opacity: 0,
+    x: -300,
+    duration: 1.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: '.hero_content',
+      start: 'top 80%',
+      toggleActions: 'play none none none'
+    }
+  });
 
-  if(!isMobile) {
-    gsap.from('.hero_img', {
-      opacity: 0,
-      x: isMobile ? 0 : 300,
-      duration: 1.5,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: '.hero_img',
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      }
-    });
-  } else {
-    gsap.from('.hero_img', {
-      opacity: 0,
-      y: isMobile ? 100 : 300, // Movimento vertical no mobile, horizontal no desktop
-      duration: 1.5,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: '.hero_img',
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      }
-    });
-  }
+  gsap.from('.hero_img', {
+    opacity: 0,
+    x: 300,
+    duration: 1.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: '.hero_img',
+      start: 'top 80%',
+      toggleActions: 'play none none none'
+    }
+  });
 
   // Animação da Seção Sobre
   gsap.from('.about', {
     opacity: 0,
-    y: 300, // Movimento vertical padrão
+    y: 300,
     duration: 1.5,
     ease: "power2.out",
     scrollTrigger: {
@@ -262,7 +236,7 @@ function setupAnimations() {
   // Animação da Seção Portifólio
   gsap.from('.portifolio', {
     opacity: 0,
-    y: 200, // Movimento vertical padrão
+    y: 200,
     duration: 1.5,
     ease: "power2.out",
     scrollTrigger: {
@@ -275,8 +249,7 @@ function setupAnimations() {
   // Animação da Seção Contato
   gsap.from('.contact', {
     opacity: 0,
-    x: isMobile ? 0 : 200, // Movimento horizontal apenas no desktop
-    y: isMobile ? 100 : 0, // Movimento vertical apenas no mobile
+    x: 200,
     duration: 1.5,
     ease: "power2.out",
     scrollTrigger: {
