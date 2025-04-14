@@ -30,4 +30,6 @@ Se tiver dúvidas ou sugestões, entre em contato:
 
 - LinkedIn : [linkedin.com/in/seu-perfil](https://www.linkedin.com/in/gerson-santos-silva/)
 
-<a href="https://portifolio-puce-theta-49.vercel.app/" target="_blank">Click para conferir o projeto</a>
+## Conferir projeto:
+
+- Portifolio: <a href="https://portifolio-puce-theta-49.vercel.app/" target="_blank">Click para conferir o projeto</a>
