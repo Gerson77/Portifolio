@@ -17,7 +17,7 @@
 }
 
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 ::selection {
@@ -66,7 +66,7 @@ ul {
   padding-top: 80px;
 }
 
-.btn {
+.btn, .btn-read-more {
   background-color: var(--main-color);
   border: 2px solid var(--main-color);
   padding: 12px 16px;
@@ -81,6 +81,13 @@ ul {
   justify-content: center;
   width: 140px;
 }
+
+.btn-read-more {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
 
 .btn:hover {
   background-color: transparent;
@@ -995,6 +1002,10 @@ textarea {
 
   .btn {
     margin: 0 auto;
+  }
+
+  .btn-read-more {
+    display: none !important;
   }
 
   .hero_content h1 {
