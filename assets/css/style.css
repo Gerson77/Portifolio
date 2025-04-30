@@ -14,6 +14,7 @@
   --subtitle-color: #f3f3f3;
   --gradient-primary: linear-gradient(150deg, #bd62f1 24%, #37207a 100%);
   --gradiend-primary-bg: linear-gradient(200deg, #3b015c 0%, #12001b 40%);
+  --primary-font:  "Poppins", sans-serif;
 }
 
 html {
@@ -39,7 +40,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--primary-font);
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
@@ -80,6 +81,7 @@ ul {
   align-items: center;
   justify-content: center;
   width: 140px;
+  font-family: var(--primary-font);
 }
 
 .btn-read-more {
@@ -466,6 +468,10 @@ header .container {
   background-image: url("../images/projeto3.png");
 }
 
+.project_04 {
+  background-image: url("../images/projeto4.png");
+}
+
 .portifolio_wrap::before {
   content: "";
   position: absolute;
@@ -531,24 +537,25 @@ header .container {
 }
 
 .portifolio_links {
+  gap: 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.portifolio_links a {
+.btn_links {
   border: none;
   background-color: var(--second-color);
-  font-weight: 600;
+  font-weight: 400;
   padding: 6px 8px;
-  color: var(--title-color);
   border-radius: 6px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
   transition: ease-in-out all 0.3s;
+  color: var(--title-color);
 }
 
-.portifolio_links a:hover {
+
+.btn_links:hover {
   background-color: var(--main-color);
   cursor: pointer;
 }
@@ -773,6 +780,9 @@ header .container {
   justify-content: space-between;
   column-gap: 20px;
 }
+.content-form {
+  font-family: var(--primary-font);
+}
 
 input {
   width: 100%;
@@ -789,6 +799,7 @@ textarea {
   font-size: 16px;
   resize: vertical;
   width: 100%;
+  font-family: var(--primary-font);
 }
 input:focus,
 textarea:focus {
