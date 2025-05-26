@@ -472,6 +472,10 @@ header .container {
   background-image: url("../images/projeto4.png");
 }
 
+.project_05 {
+  background-image: url("../images/projeto5.jpg");
+}
+
 .portifolio_wrap::before {
   content: "";
   position: absolute;
