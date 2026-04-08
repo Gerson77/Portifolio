@@ -1,495 +1,603 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfólio de Gerson Santos, um desenvolvedor criativo que transforma ideias em realizações."
+      content="Portfólio de Gerson Santos — Desenvolvedor Web & Freelancer. Transformando ideias em experiências digitais de alto impacto."
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Gerson Santos</title>
-    <!-- Link do Font Awesome -->
+    <title>Gerson Santos — Desenvolvedor & Freelancer</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   </head>
 
   <body>
-    <header id="header" class="header">
-      <div class="container">
-        <a href="#hero" class="logo">Gerson Santos</a>
+    <canvas id="bg-particles"></canvas>
 
-        <ul class="menu">
-          <li class="menu_item">
-            <a href="#hero" class="menu_link">Início</a>
-          </li>
-          <li class="menu_item">
-            <a href="#about" class="menu_link">Sobre</a>
-          </li>
-          <li class="menu_item">
-            <a href="#portifolio" class="menu_link">Portifólio</a>
-          </li>
-          <li class="menu_item">
-            <a href="#contact" class="menu_link">Contato</a>
-          </li>
-          <ion-icon name="close-outline" class="close_icon"></ion-icon>
-        </ul>
-        <ion-icon name="menu" class="toggle_icon"></ion-icon>
+    <!-- HEADER -->
+    <header id="header" class="header">
+      <div class="container header-inner">
+        <a href="#hero" class="logo">
+          <span class="logo-dot"></span>Gerson Santos
+        </a>
+        <nav>
+          <ul class="menu">
+            <li><a href="#hero" class="menu_link active-link">Início</a></li>
+            <li><a href="#about" class="menu_link">Sobre</a></li>
+            <li><a href="#services" class="menu_link">Serviços</a></li>
+            <li><a href="#portifolio" class="menu_link">Portfólio</a></li>
+            <li><a href="#skills" class="menu_link">Skills</a></li>
+            <li><a href="#contact" class="menu_link">Contato</a></li>
+          </ul>
+        </nav>
+        <a href="#contact" class="btn btn-primary header-cta">Vamos Conversar</a>
+        <ion-icon name="menu-outline" class="toggle_icon"></ion-icon>
+        <ion-icon name="close-outline" class="close_icon"></ion-icon>
       </div>
     </header>
 
+    <!-- MOBILE NAV OVERLAY -->
+    <div class="mobile-nav-overlay" id="mobile-nav">
+      <ul class="mobile-menu">
+        <li><a href="#hero" class="mobile-menu-link">Início</a></li>
+        <li><a href="#about" class="mobile-menu-link">Sobre</a></li>
+        <li><a href="#services" class="mobile-menu-link">Serviços</a></li>
+        <li><a href="#portifolio" class="mobile-menu-link">Portfólio</a></li>
+        <li><a href="#skills" class="mobile-menu-link">Skills</a></li>
+        <li><a href="#contact" class="mobile-menu-link">Contato</a></li>
+      </ul>
+    </div>
+
     <main>
+      <!-- HERO -->
       <section class="hero section" id="hero">
-        <div class="container grid hero_container">
+        <div class="container hero-body">
           <div class="hero_content">
-            <h3>Olá,</h3>
-            <h1>
-              Sou
-              <span
-                class="typed"
-                data-typed-items="Desenvolvedor, Freelancer"
-              ></span>
-            </h1>
-            <p>
-              "Sou um desenvolvedor apaixonado por tecnologia, com foco em
-              transformar ideias em códigos funcionais e códigos em soluções
-              inovadoras. Meu compromisso é entregar projetos que atendam às
-              necessidades do usuário e impulsionem resultados reais."
+            <span class="hero-badge">Disponível para novos projetos</span>
+            <h3 class="hero-greeting">Olá, eu sou</h3>
+            <h1 class="hero-title">Gerson Santos</h1>
+            <p class="hero-tagline">
+              Desenvolvo <span class="typed" data-typed-items="interfaces modernas,aplicações web completas,experiências digitais únicas,soluções sob medida"></span>
             </p>
-            <div class="hero_social">
-              <a
-                href="https://www.linkedin.com/in/gerson-santos-silva/"
-                target="_blank"
-              >
-                <i class="fa-brands fa-linkedin fa-lg"></i>
+            <p class="hero-description">
+              Combino design e código para criar produtos digitais que geram
+              resultados reais para negócios e encantam seus usuários.
+            </p>
+            <div class="hero-actions">
+              <a href="#portifolio" class="btn btn-primary">
+                <span>Ver Projetos</span>
+                <i class="fa fa-arrow-right"></i>
               </a>
-              <a href="https://github.com/Gerson77" target="_blank"
-                ><i class="fa-brands fa-github fa-lg"></i
-              ></a>
-              <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+              <a href="#contact" class="btn btn-outline">
+                <span>Fale Comigo</span>
+              </a>
             </div>
-            <a href="#about" class="btn-read-more">
-              <span>Ler mais </span>
-              <i class="fa fa-arrow-right fa-lg"></i>
-            </a>
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-number">9+</span>
+                <span class="stat-label">Projetos</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-number">4+</span>
+                <span class="stat-label">Landing Pages</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Fullstack</span>
+              </div>
+            </div>
+            <div class="hero-social">
+              <a href="https://www.linkedin.com/in/gerson-santos-silva/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://github.com/Gerson77" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
           </div>
-          <div class="hero_img">
-            <img
-              src="./assets/images/laptop.gif"
-              alt="Banner do Portfólio de Gerson Santos"
-              class="img-fluid"
-            />
+          <div class="hero-img-wrap hero_img">
+            <div class="hero-img-glow"></div>
+            <img src="./assets/images/laptop.gif" alt="Gerson Santos - Desenvolvedor" class="hero-img-fluid" />
+            <div class="hero-img-badge">
+              <i class="fa fa-code"></i>
+              <span>Dev Criativo</span>
+            </div>
           </div>
         </div>
+        <div class="hero-bg-gradient"></div>
       </section>
 
-      <!-- Sobre -->
+      <!-- ABOUT -->
       <section class="about section" id="about">
-        <h2 class="section_title">Sobre</h2>
-
-        <div class="container grid about_container">
-          <div class="about_img">
-            <img src="./assets/images/About.png" alt="" />
-          </div>
-
-          <div class="about_content">
-            <div class="content_about">
-              <h1>Proficional em desenvolvimento</h1>
+        <div class="container">
+          <span class="section-label">Sobre Mim</span>
+          <h2 class="section_title">Transformo ideias em <span class="text-gradient">experiências digitais</span></h2>
+          <div class="about-body">
+            <div class="about-img-col">
+              <div class="about-img-wrapper">
+                <img src="./assets/images/About.png" alt="Sobre Gerson Santos" />
+              </div>
+              <div class="about-exp-badge">
+                <span class="exp-num">&lt;/&gt;</span>
+                <span>Código limpo & design moderno</span>
+              </div>
+            </div>
+            <div class="about-text-col">
+              <h3>Profissional em Desenvolvimento Web</h3>
               <p>
                 Acredito que a tecnologia tem o poder de mudar o mundo. Como
                 desenvolvedor, dedico-me a transformar ideias em códigos e
                 códigos em soluções que fazem a diferença. Cada projeto é uma
-                oportunidade de criar algo único e significativo. O que me
-                motiva é a possibilidade de resolver problemas complexos através
-                da tecnologia. Acredito que cada projeto é uma oportunidade de
-                aprender algo novo e de criar algo que realmente faça a
-                diferença na vida das pessoas.
+                oportunidade de criar algo único e significativo.
               </p>
-            </div>
-            <div class="about_info">
-              <div>
-                <span class="tags">Front-end</span>
+              <p>
+                O que me motiva é a possibilidade de resolver problemas complexos
+                através da tecnologia, criando algo que realmente faça a diferença
+                na vida das pessoas.
+              </p>
+              <div class="about-tags">
+                <span class="tag"><i class="fa fa-palette"></i>Front-end</span>
+                <span class="tag"><i class="fa fa-mobile-alt"></i>Mobile</span>
+                <span class="tag"><i class="fa fa-server"></i>Back-end</span>
+                <span class="tag"><i class="fa fa-pen-nib"></i>UX/UI</span>
+                <span class="tag"><i class="fa fa-database"></i>Fullstack</span>
               </div>
-              <div>
-                <span class="tags">Mobile</span>
-              </div>
-              <div>
-                <span class="tags">Desenvolvedor</span>
-              </div>
-              <div>
-                <span class="tags">UX/UI</span>
-              </div>
+              <a href="#contact" class="btn btn-primary">
+                <span>Vamos Conversar</span>
+                <i class="fa fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Portifolio -->
+      <!-- SERVICES -->
+      <section class="services section" id="services">
+        <div class="container">
+          <span class="section-label">O que faço</span>
+          <h2 class="section_title">Serviços <span class="text-gradient">sob medida</span></h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon"><i class="fa fa-laptop-code"></i></div>
+              <h3>Landing Pages</h3>
+              <p>Páginas de alta conversão com design moderno, responsivas e otimizadas para performance.</p>
+              <ul class="service-features">
+                <li><i class="fa fa-check"></i> Design responsivo</li>
+                <li><i class="fa fa-check"></i> Animações suaves</li>
+                <li><i class="fa fa-check"></i> SEO otimizado</li>
+                <li><i class="fa fa-check"></i> Performance A+</li>
+              </ul>
+            </div>
+            <div class="service-card highlighted">
+              <div class="service-badge">Mais procurado</div>
+              <div class="service-icon"><i class="fa fa-layer-group"></i></div>
+              <h3>Aplicações Web</h3>
+              <p>Sistemas completos do front ao back-end com funcionalidades sob medida para seu negócio.</p>
+              <ul class="service-features">
+                <li><i class="fa fa-check"></i> Front-end moderno</li>
+                <li><i class="fa fa-check"></i> API & Banco de dados</li>
+                <li><i class="fa fa-check"></i> Autenticação segura</li>
+                <li><i class="fa fa-check"></i> Painel administrativo</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><i class="fa fa-pencil-ruler"></i></div>
+              <h3>UX/UI Design</h3>
+              <p>Interfaces intuitivas focadas na experiência do usuário, alinhadas aos objetivos do negócio.</p>
+              <ul class="service-features">
+                <li><i class="fa fa-check"></i> Wireframes & Protótipos</li>
+                <li><i class="fa fa-check"></i> Design System</li>
+                <li><i class="fa fa-check"></i> Testes de usabilidade</li>
+                <li><i class="fa fa-check"></i> Design responsivo</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><i class="fa fa-mobile-alt"></i></div>
+              <h3>Desenvolvimento Mobile</h3>
+              <p>Aplicativos funcionais e bonitos para as principais plataformas móveis.</p>
+              <ul class="service-features">
+                <li><i class="fa fa-check"></i> React Native</li>
+                <li><i class="fa fa-check"></i> Interface nativa</li>
+                <li><i class="fa fa-check"></i> Integração API</li>
+                <li><i class="fa fa-check"></i> Publicação em loja</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
       <section class="portifolio section" id="portifolio">
-        <div class="section_title">Projetos</div>
+        <div class="container">
+          <span class="section-label">Meu Trabalho</span>
+          <h2 class="section_title">Projetos <span class="text-gradient">recentes</span></h2>
 
-        <ul class="portifolio_filters">
-          <li data-filter="all" class="filter-active">Todos</li>
-          <li data-filter=".filter-landing">Landing pages</li>
-          <li data-filter=".filter-fullstack">FullStack</li>
-        </ul>
+          <ul class="portifolio_filters">
+            <li data-filter="all" class="filter-active">Todos</li>
+            <li data-filter=".filter-landing">Landing Pages</li>
+            <li data-filter=".filter-fullstack">Fullstack</li>
+          </ul>
 
-        <div class="container portifolio_wrap-container">
-          <div class="portifolio_item filter-landing">
-            <div class="portifolio_wrap">
-              <div class="box_img_projeto project_01"></div>
-              <div class="portifolio_info">
-                <h4>Waiterapp</h4>
-                <p>o app do garçom</p>
-                <div class="portifolio_links">
-                  <a
-                    target="_blank"
-                    href="https://github.com/Gerson77/landingpage-waiter"
-                    class="btn_links"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                    <span>Repositório</span>
-                  </a>
-
-                  <a
-                    target="_blank"
-                    href="https://landingpage-waiter.vercel.app/"
-                    class="btn_links"
-                  >
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <span>Ver projeto</span></a
-                  >
+          <div class="portifolio_wrap-container" data-mixitup>
+            <!-- 01 Waiterapp -->
+            <div class="portifolio_item filter-landing">
+              <div class="portifolio_card">
+                <div class="card-img-wrap">
+                  <div class="box_img_projeto project_01"></div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="portifolio_item filter-fullstack">
-            <div class="portifolio_wrap">
-              <div class="box_img_projeto project_02"></div>
-              <div class="portifolio_info">
-                <h4>MyContacts</h4>
-                <p>Gerenciador de contatos</p>
-                <div class="portifolio_links">
-                  <a
-                    target="_blank"
-                    href="https://github.com/Gerson77/mycontacts"
-                    class="btn_links"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                    <span>Respositório</span></a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="portifolio_item filter-fullstack">
-            <div class="portifolio_wrap">
-              <div class="box_img_projeto project_03"></div>
-              <div class="portifolio_info">
-                <h4>Fincheck</h4>
-                <p>Controle sua finanças</p>
-                <div class="portifolio_links">
-                  <div class="btn_links">
-                    <a
-                      target="_blank"
-                      href="https://github.com/Gerson77/fincheck"
-                      class="btn_links"
-                    >
+                <div class="card-overlay">
+                  <div class="card-tags">
+                    <span class="card-tag">Landing Page</span>
+                  </div>
+                  <h4>Waiterapp</h4>
+                  <p>O app do garçom</p>
+                  <div class="card-links">
+                    <a href="https://github.com/Gerson77/landingpage-waiter" target="_blank" title="Repositório">
                       <i class="fa-brands fa-github"></i>
-                      <span>Repositório</span>
+                    </a>
+                    <a href="https://landingpage-waiter.vercel.app/" target="_blank" title="Ver projeto">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 02 MyContacts -->
+            <div class="portifolio_item filter-fullstack">
+              <div class="portifolio_card">
+                <div class="card-img-wrap">
+                  <div class="box_img_projeto project_02"></div>
+                </div>
+                <div class="card-overlay">
+                  <div class="card-tags">
+                    <span class="card-tag">Fullstack</span>
+                  </div>
+                  <h4>MyContacts</h4>
+                  <p>Gerenciador de contatos</p>
+                  <div class="card-links">
+                    <a href="https://github.com/Gerson77/mycontacts" target="_blank" title="Repositório">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 03 Fincheck -->
+            <div class="portifolio_item filter-fullstack">
+              <div class="portifolio_card">
+                <div class="card-img-wrap">
+                  <div class="box_img_projeto project_03"></div>
+                </div>
+                <div class="card-overlay">
+                  <div class="card-tags">
+                    <span class="card-tag">Fullstack</span>
+                  </div>
+                  <h4>Fincheck</h4>
+                  <p>Controle suas finanças</p>
+                  <div class="card-links">
+                    <a href="https://github.com/Gerson77/fincheck" target="_blank" title="Repositório">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 04 DentiMax -->
+            <div class="portifolio_item filter-landing">
+              <div class="portifolio_card">
+                <div class="card-img-wrap">
+                  <div class="box_img_projeto project_04"></div>
+                </div>
+                <div class="card-overlay">
+                  <div class="card-tags">
+                    <span class="card-tag">Landing Page</span>
+                  </div>
+                  <h4>DentiMax</h4>
+                  <p>Clínica Odontológica</p>
+                  <div class="card-links">
+                    <a href="https://github.com/Gerson77/landing-odonto" target="_blank" title="Repositório">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://landing-odonto.vercel.app/" target="_blank" title="Ver projeto">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 05 Easybank -->
+            <div class="portifolio_item filter-landing">
+              <div class="portifolio_card">
+                <div class="card-img-wrap">
+                  <div class="box_img_projeto project_05"></div>
+                </div>
+                <div class="card-overlay">
+                  <div class="card-tags">
+                    <span class="card-tag">Landing Page</span>
+                  </div>
+                  <h4>Easybank</h4>
+                  <p>Responsive banking landing page</p>
+                  <div class="card-links">
+                    <a href="https://github.com/Gerson77/easybank-landing" target="_blank" title="Repositório">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://easybank-landing-murex.vercel.app/" target="_blank" title="Ver projeto">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 06 Space Tourism -->
+            <div class="portifolio_item filter-landing">
+              <div class="portifolio_card">
+                <div class="card-img-wrap">
+                  <div class="box_img_projeto project_06"></div>
+                </div>
+                <div class="card-overlay">
+                  <div class="card-tags">
+                    <span class="card-tag">Landing Page</span>
+                  </div>
+                  <h4>Space Tourism</h4>
+                  <p>Space tourism multi-page</p>
+                  <div class="card-links">
+                    <a href="https://github.com/Gerson77/Space-tourism" target="_blank" title="Repositório">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://space-tourism-steel-ten.vercel.app/" target="_blank" title="Ver projeto">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 07 URL Shortening -->
+            <div class="portifolio_item filter-landing">
+              <div class="portifolio_card">
+                <div class="card-img-wrap">
+                  <div class="box_img_projeto project_07"></div>
+                </div>
+                <div class="card-overlay">
+                  <div class="card-tags">
+                    <span class="card-tag">Landing Page</span>
+                  </div>
+                  <h4>URL Shortening API</h4>
+                  <p>URL shortening landing</p>
+                  <div class="card-links">
+                    <a href="https://github.com/Gerson77/URL-shortening-API-landing" target="_blank" title="Repositório">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://url-shortening-api-landing.vercel.app/" target="_blank" title="Ver projeto">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 08 Chat App -->
+            <div class="portifolio_item filter-landing">
+              <div class="portifolio_card">
+                <div class="card-img-wrap">
+                  <div class="box_img_projeto project_08"></div>
+                </div>
+                <div class="card-overlay">
+                  <div class="card-tags">
+                    <span class="card-tag">Landing Page</span>
+                  </div>
+                  <h4>Chat App CSS Illustration</h4>
+                  <p>Chat app CSS illustration</p>
+                  <div class="card-links">
+                    <a href="https://github.com/Gerson77/Chat-app-CSS-illustration" target="_blank" title="Repositório">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://chat-app-css-illustration-eight-rho.vercel.app/" target="_blank" title="Ver projeto">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 09 Fylo -->
+            <div class="portifolio_item filter-landing">
+              <div class="portifolio_card">
+                <div class="card-img-wrap">
+                  <div class="box_img_projeto project_09"></div>
+                </div>
+                <div class="card-overlay">
+                  <div class="card-tags">
+                    <span class="card-tag">Landing Page</span>
+                  </div>
+                  <h4>Fylo Dark Theme</h4>
+                  <p>Fylo dark theme landing page</p>
+                  <div class="card-links">
+                    <a href="https://github.com/Gerson77/Fylo-dark-theme-landing-page" target="_blank" title="Repositório">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://fylo-dark-theme-landing-page-five-eta.vercel.app/" target="_blank" title="Ver projeto">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="portifolio_item filter-landing">
-            <div class="portifolio_wrap">
-              <div class="box_img_projeto project_04"></div>
-              <div class="portifolio_info">
-                <h4>DentiMax</h4>
-                <p>Clínica Odontlógica</p>
-                <div class="portifolio_links">
-                  <a
-                    target="_blank"
-                    href="https://github.com/Gerson77/landing-odonto"
-                    class="btn_links"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                    <span>Repositório</span></a
-                  >
-
-                  <a
-                    target="_blank"
-                    href="https://landing-odonto.vercel.app/"
-                    class="btn_links"
-                  >
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <span>Ver projeto</span></a
-                  >
-                </div>
-              </div>
+      <!-- SKILLS -->
+      <section class="skills section" id="skills">
+        <div class="container">
+          <span class="section-label">Tecnologias</span>
+          <h2 class="section_title">Stack <span class="text-gradient">tecnológica</span></h2>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+              <span>HTML5</span>
             </div>
-          </div>
-
-          <div class="portifolio_item filter-landing">
-            <div class="portifolio_wrap">
-              <div class="box_img_projeto project_05"></div>
-              <div class="portifolio_info">
-                <h4>Easybank</h4>
-                <p>Responsive Langing page Easybank</p>
-                <div class="portifolio_links">
-                  <a
-                    target="_blank"
-                    href="https://github.com/Gerson77/easybank-landing"
-                    class="btn_links"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                    <span>Repositório</span></a
-                  >
-
-                  <a
-                    target="_blank"
-                    href="https://easybank-landing-murex.vercel.app/"
-                    class="btn_links"
-                  >
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <span>Ver projeto</span></a
-                  >
-                </div>
-              </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+              <span>CSS3</span>
             </div>
-          </div>
-
-          <div class="portifolio_item filter-landing">
-            <div class="portifolio_wrap">
-              <div class="box_img_projeto project_06"></div>
-              <div class="portifolio_info">
-                <h4>Space Tourism</h4>
-                <p>Responsive Multi Page Space Tourism</p>
-                <div class="portifolio_links">
-                  <a
-                    target="_blank"
-                    href="https://github.com/Gerson77/Space-tourism"
-                    class="btn_links"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                    <span>Repositório</span></a
-                  >
-
-                  <a
-                    target="_blank"
-                    href="https://space-tourism-steel-ten.vercel.app/"
-                    class="btn_links"
-                  >
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <span>Ver projeto</span></a
-                  >
-                </div>
-              </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+              <span>JavaScript</span>
             </div>
-          </div>
-
-          <div class="portifolio_item filter-landing">
-            <div class="portifolio_wrap">
-              <div class="box_img_projeto project_07"></div>
-              <div class="portifolio_info">
-                <h4>URL shortening API</h4>
-                <p>Responsive URL shortening API landing</p>
-                <div class="portifolio_links">
-                  <a
-                    target="_blank"
-                    href="https://github.com/Gerson77/URL-shortening-API-landing"
-                    class="btn_links"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                    <span>Repositório</span></a
-                  >
-
-                  <a
-                    target="_blank"
-                    href="https://url-shortening-api-landing.vercel.app/"
-                    class="btn_links"
-                  >
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <span>Ver projeto</span></a
-                  >
-                </div>
-              </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-react"></i></div>
+              <span>React</span>
             </div>
-          </div>
-
-          <div class="portifolio_item filter-landing">
-            <div class="portifolio_wrap">
-              <div class="box_img_projeto project_08"></div>
-              <div class="portifolio_info">
-                <h4>Chat app CSS illustration</h4>
-                <p>Chat app CSS illustration landing</p>
-                <div class="portifolio_links">
-                  <a
-                    target="_blank"
-                    href="https://github.com/Gerson77/Chat-app-CSS-illustration"
-                    class="btn_links"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                    <span>Repositório</span></a
-                  >
-
-                  <a
-                    target="_blank"
-                    href="https://chat-app-css-illustration-eight-rho.vercel.app/"
-                    class="btn_links"
-                  >
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <span>Ver projeto</span></a
-                  >
-                </div>
-              </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-node-js"></i></div>
+              <span>Node.js</span>
             </div>
-          </div>
-
-          <div class="portifolio_item filter-landing">
-            <div class="portifolio_wrap">
-              <div class="box_img_projeto project_09"></div>
-              <div class="portifolio_info">
-                <h4>Fylo Dark Theme page</h4>
-                <p>Fylo Dark Theme page landing</p>
-                <div class="portifolio_links">
-                  <a
-                    target="_blank"
-                    href="https://github.com/Gerson77/Fylo-dark-theme-landing-page"
-                    class="btn_links"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                    <span>Repositório</span></a
-                  >
-
-                  <a
-                    target="_blank"
-                    href="https://fylo-dark-theme-landing-page-five-eta.vercel.app/"
-                    class="btn_links"
-                  >
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <span>Ver projeto</span></a
-                  >
-                </div>
-              </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+              <span>Git</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-figma"></i></div>
+              <span>Figma</span>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa fa-database"></i></div>
+              <span>MongoDB</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Contato -->
-      <section class="contact section" id="contact">
-        <h2 class="section_title">Entrar em contato</h2>
+      <!-- TESTIMONIALS / CTA -->
+      <section class="cta-banner section" id="cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Tem um projeto em mente?</h2>
+            <p>Vamos transformar sua ideia em realidade. Entre em contato e receba um orçamento personalizado.</p>
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <i class="fa fa-paper-plane"></i>
+              <span>Solicitar Orçamento</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <div class="container contact_container">
-          <div class="contact_content">
-            <form
-              class="content-form"
-              id="contact-form"
-              action="https://formspree.io/f/xovebadr"
-              method="POST"
-            >
-              <div class="inputs">
-                <input type="text" name="name" placeholder="Nome" required />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="E-mail"
-                  required
-                />
+      <!-- CONTACT -->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <span class="section-label">Contato</span>
+          <h2 class="section_title">Vamos <span class="text-gradient">conversar</span></h2>
+          <div class="contact-body">
+            <div class="contact-info">
+              <div class="contact-info-card">
+                <div class="info-icon"><i class="fa fa-envelope"></i></div>
+                <div>
+                  <h4>E-mail</h4>
+                  <p>gerson@email.com</p>
+                </div>
+              </div>
+              <div class="contact-info-card">
+                <div class="info-icon"><i class="fa fa-map-marker-alt"></i></div>
+                <div>
+                  <h4>Localização</h4>
+                  <p>Brasil</p>
+                </div>
+              </div>
+              <div class="contact-info-card">
+                <div class="info-icon"><i class="fa fa-phone"></i></div>
+                <div>
+                  <h4>Telefone</h4>
+                  <p>(00) 00000-0000</p>
+                </div>
+              </div>
+              <div class="contact-info-social">
+                <a href="https://www.linkedin.com/in/gerson-santos-silva/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/Gerson77" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+            <form class="contact-form" id="contact-form" action="https://formspree.io/f/xovebadr" method="POST">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nome</label>
+                  <input type="text" id="name" name="name" placeholder="Seu nome" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+                </div>
               </div>
               <span class="warning message-email">E-mail inválido.</span>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Telefone (99) 99999-9999"
-              />
-              <span class="warning message-phone"
-                >Telefone inválido. Exemplo (99) 99999-9999.</span
-              >
-              <textarea
-                name="message"
-                cols="30"
-                rows="10"
-                placeholder="Mensagem"
-                required
-              ></textarea>
-              <button type="submit" class="btn">
-                Enviar Mensagem <ion-icon name="send-outline"></ion-icon>
+              <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(99) 99999-9999" />
+              </div>
+              <span class="warning message-phone">Telefone inválido. Exemplo: (99) 99999-9999.</span>
+              <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="5" placeholder="Conte-me sobre seu projeto..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <span>Enviar Mensagem</span>
+                <i class="fa fa-paper-plane"></i>
               </button>
             </form>
           </div>
 
-          <!-- Elemento para exibir a mensagem de sucesso -->
+          <!-- Success message -->
           <div id="success-message" class="message_box">
             <div class="overlay"></div>
             <div class="message">
               <i class="fa fa-check"></i>
-              <h2>Mensagem enviada com sucesso</h2>
-              <span>Aguarde retorno!</span>
+              <h2>Mensagem enviada com sucesso!</h2>
+              <span>Aguarde o retorno!</span>
             </div>
           </div>
         </div>
       </section>
-
-      <footer>
-        <div class="footer_bg">
-          <div class="container footer_container">
-            <div class="main_footer">
-              <div class="footer_social">
-                <a
-                  href="https://www.linkedin.com/in/gerson-santos-silva/"
-                  target="_blank"
-                >
-                  <i class="fa-brands fa-linkedin fa-lg"></i>
-                </a>
-                <a href="https://github.com/Gerson77/" target="_blank">
-                  <i class="fa-brands fa-github fa-lg"></i>
-                </a>
-                <a href="https://github.com/Gerson77/" target="_blank">
-                  <i class="fa-brands fa-instagram fa-lg"></i>
-                </a>
-              </div>
-            </div>
-            <div class="footer_copy">
-              &#169; Gerson Santos. All right reserved.
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <a href="#hero" class="footer-logo">
+            <span class="logo-dot"></span>Gerson Santos
+          </a>
+          <p class="footer-tagline">Desenvolvedor Web & Freelancer — Transformando ideias em experiências digitais.</p>
+          <ul class="footer-links">
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#portifolio">Portfólio</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/gerson-santos-silva/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/Gerson77/" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <p class="footer-copy">&copy; 2026 Gerson Santos. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
     <script src="./assets/js/gsap.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
-      integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
