@@ -14,6 +14,11 @@
   <a href="#-licença">Licença</a>
 </p>
 
+<div align="center">
+  <img src="./assets/images/demo-portifolio.png" alt="Capa do Portfólio" width="800"/>
+</div>
+
+
 ---
 
 ## 📋 Sobre o projeto
