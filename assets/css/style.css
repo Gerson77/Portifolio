@@ -786,7 +786,7 @@ img {
 }
 
 .project_01 {
-  background-image: url("../images/projeto1.png");
+  background-image: url("https://raw.githubusercontent.com/Gerson77/landingpage-waiter/master/assets/capa.png");
 }
 
 .project_02 {
@@ -798,27 +798,27 @@ img {
 }
 
 .project_04 {
-  background-image: url("../images/projeto4.png");
+  background-image: url("https://raw.githubusercontent.com/Gerson77/landing-odonto/master/assets/capa-odonto.png");
 }
 
 .project_05 {
-  background-image: url("../images/projeto5.jpg");
+  background-image: url("https://raw.githubusercontent.com/Gerson77/easybank-landing/master/images/desktop-preview.jpg");
 }
 
 .project_06 {
-  background-image: url("../images/projeto6.jpg");
+  background-image: url("https://raw.githubusercontent.com/Gerson77/Space-tourism/master/src/assets/preview.jpg");
 }
 
 .project_07 {
-  background-image: url("../images/projeto7.jpg");
+  background-image: url("https://raw.githubusercontent.com/Gerson77/URL-shortening-API-landing/master/design/desktop-preview.jpg");
 }
 
 .project_08 {
-  background-image: url("../images/projeto8.jpg");
+  background-image: url("https://raw.githubusercontent.com/Gerson77/Chat-app-CSS-illustration/master/preview.jpg");
 }
 
 .project_09 {
-  background-image: url("../images/projeto9.jpg");
+  background-image: url("https://raw.githubusercontent.com/Gerson77/Fylo-dark-theme-landing-page/master/preview.jpg");
 }
 
 .portifolio_card:hover .box_img_projeto {
